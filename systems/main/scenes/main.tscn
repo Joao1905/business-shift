@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bsicj1xxdvanm" path="res://systems/main/scripts/MainController.gd" id="1_jacyw"]
 [ext_resource type="PackedScene" uid="uid://cw4jcgkjhruqn" path="res://systems/map/scenes/map.tscn" id="2_wn47p"]
 [ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/ui/scenes/title_screen.tscn" id="3_bemvd"]
+[ext_resource type="PackedScene" uid="uid://bc7kk1udac1e8" path="res://systems/battle/scenes/battle.tscn" id="4_bemvd"]
+[ext_resource type="Script" uid="uid://pmue2nibling" path="res://systems/battle/scripts/Battle.gd" id="5_5ah0n"]
 
 [node name="Main" type="Node2D" unique_id=390530669]
 script = ExtResource("1_jacyw")
@@ -17,3 +19,6 @@ visible = false
 custom_minimum_size = Vector2(1152, 648)
 offset_right = 1152.0
 offset_bottom = 648.0
+
+[node name="Battle" parent="." unique_id=22246929 instance=ExtResource("4_bemvd")]
+script = ExtResource("5_5ah0n")

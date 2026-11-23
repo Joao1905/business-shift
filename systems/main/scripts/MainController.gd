@@ -1,9 +1,11 @@
+class_name MainController
 extends Node
 
-enum SCREENS {MAP, TITLE}
+enum SCREENS {MAP, TITLE, BATTLE}
 @onready var _screen_to_node: Dictionary[SCREENS, Node] = {
 	SCREENS.MAP: $Map,
-	SCREENS.TITLE: $TitleScreen
+	SCREENS.TITLE: $TitleScreen,
+	SCREENS.BATTLE: $Battle
 }
 
 var visible_screen: Node = null

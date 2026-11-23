@@ -28,6 +28,8 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://systems/": "teal",
+"res://systems/battle/assets/": "red",
+"res://systems/battle/scripts/": "blue",
 "res://systems/main/scripts/": "blue",
 "res://systems/map/assets/": "red",
 "res://systems/map/scripts/": "blue",
