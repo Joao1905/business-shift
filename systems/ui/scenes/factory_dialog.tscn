@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bqw25cyxwiyag"]
+
+[ext_resource type="Theme" uid="uid://dykjuhwt7w5ir" path="res://systems/ui/assets/themes/ui_theme.tres" id="1_4wgja"]
+[ext_resource type="Script" uid="uid://b8773qy6n2gd4" path="res://systems/ui/scripts/FactoryDialog.gd" id="1_dlgd3"]
+
+[node name="FactoryDialog" type="PanelContainer" unique_id=2056295604]
+offset_right = 169.0
+offset_bottom = 133.0
+theme = ExtResource("1_4wgja")
+theme_type_variation = &"DialogPanelContainer"
+script = ExtResource("1_dlgd3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1430168976]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=355433322]
+layout_mode = 2
+text = "Factory Name"
+
+[node name="FactoryNameField" type="LineEdit" parent="VBoxContainer" unique_id=504605693]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Factory..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=108317527]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1712982299]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start!"
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=610025127]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"

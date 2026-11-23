@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cdevqjipkdm2p"]
+
+[ext_resource type="Script" uid="uid://b02y3yd5kkv64" path="res://systems/ui/scripts/TitleScreen.gd" id="1_47r50"]
+[ext_resource type="Theme" uid="uid://dykjuhwt7w5ir" path="res://systems/ui/assets/themes/ui_theme.tres" id="1_rdefx"]
+[ext_resource type="PackedScene" uid="uid://bqw25cyxwiyag" path="res://systems/ui/scenes/factory_dialog.tscn" id="1_uf4yk"]
+
+[node name="TitleScreen" type="Control" unique_id=1384893326]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rdefx")
+script = ExtResource("1_47r50")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=774109275]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=813414324]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1981304070]
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+text = "Business Shift"
+
+[node name="NewGameButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=308461576]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New Game"
+
+[node name="FactoryDialog" parent="CenterContainer" unique_id=1533846051 instance=ExtResource("1_uf4yk")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
