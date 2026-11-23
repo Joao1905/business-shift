@@ -3,7 +3,10 @@ extends Node
 
 @export var root: MapNode
 signal map_node_clicked(node: MapNode)
-var current_node: MapNode = null
+var current_node: MapNode = null:
+	set(value):
+		current_node = value
+		GameData.current_node = value
 
 func _ready() -> void:
 	assert(root != null, MapErrors.UNASSIGNED_ROOT_ERROR)

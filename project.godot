@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Business Shift"
-run/main_scene="uid://cdevqjipkdm2p"
+run/main_scene="uid://wdkexingy08e"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -28,6 +28,7 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://systems/": "teal",
+"res://systems/main/scripts/": "blue",
 "res://systems/map/assets/": "red",
 "res://systems/map/scripts/": "blue",
 "res://systems/ui/assets/": "red",

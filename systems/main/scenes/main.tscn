@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wdkexingy08e"]
+
+[ext_resource type="Script" uid="uid://bsicj1xxdvanm" path="res://systems/main/scripts/MainController.gd" id="1_jacyw"]
+[ext_resource type="PackedScene" uid="uid://cw4jcgkjhruqn" path="res://systems/map/scenes/map.tscn" id="2_wn47p"]
+[ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/ui/scenes/title_screen.tscn" id="3_bemvd"]
+
+[node name="Main" type="Node2D" unique_id=390530669]
+script = ExtResource("1_jacyw")
+
+[node name="Map" parent="." unique_id=564566897 instance=ExtResource("2_wn47p")]
+visible = false
+custom_minimum_size = Vector2(1152, 648)
+offset_bottom = 0.0
+
+[node name="TitleScreen" parent="." unique_id=1384893326 instance=ExtResource("3_bemvd")]
+visible = false
+custom_minimum_size = Vector2(1152, 648)
+offset_right = 1152.0
+offset_bottom = 648.0
