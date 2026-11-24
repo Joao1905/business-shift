@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cw4jcgkjhruqn" path="res://systems/map/scenes/map.tscn" id="2_wn47p"]
 [ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/ui/scenes/title_screen.tscn" id="3_bemvd"]
 [ext_resource type="PackedScene" uid="uid://bc7kk1udac1e8" path="res://systems/battle/scenes/battle.tscn" id="4_bemvd"]
-[ext_resource type="Script" uid="uid://pmue2nibling" path="res://systems/battle/scripts/Battle.gd" id="5_5ah0n"]
+[ext_resource type="Script" uid="uid://pmue2nibling" path="res://systems/battle/scripts/BattleController.gd" id="5_5ah0n"]
 
 [node name="Main" type="Node2D" unique_id=390530669]
 script = ExtResource("1_jacyw")

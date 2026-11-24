@@ -1,4 +1,4 @@
-class_name Battle
+class_name BattleController
 extends Node
 
 @onready var main_controller: MainController = $".." as MainController

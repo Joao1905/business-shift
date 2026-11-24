@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b1xbbh8h3lie2"]
+
+[ext_resource type="Script" uid="uid://bhiog2i0ulko6" path="res://systems/battle/scripts/BattleRenderer.gd" id="1_4jhof"]
+[ext_resource type="Script" uid="uid://bf6cxh36cw3lu" path="res://systems/battle/scripts/FactoryRenderer.gd" id="2_jdhqp"]
+
+[node name="BattleRenderer" type="Control" unique_id=799558907]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4jhof")
+
+[node name="Border" type="PanelContainer" parent="." unique_id=1926801922]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Vertical Separator" type="VBoxContainer" parent="Border" unique_id=1926509317]
+layout_mode = 2
+
+[node name="FactoryName" type="Label" parent="Border/Vertical Separator" unique_id=419570821]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FactoryRenderer" type="Node2D" parent="Border/Vertical Separator" unique_id=1366527808]
+script = ExtResource("2_jdhqp")

@@ -1,5 +1,33 @@
 [gd_scene format=3 uid="uid://bc7kk1udac1e8"]
 
+[ext_resource type="PackedScene" uid="uid://b1xbbh8h3lie2" path="res://systems/battle/scenes/battle_renderer.tscn" id="1_jvcc5"]
+
 [node name="Battle" type="Control" unique_id=22246929]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Enemy Block" type="HBoxContainer" parent="." unique_id=1955554190]
+layout_mode = 1
+
+[node name="EnemyRenderer" parent="Enemy Block" unique_id=799558907 instance=ExtResource("1_jvcc5")]
+layout_mode = 2
+
+[node name="Player Block" type="HBoxContainer" parent="." unique_id=679204122]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="PlayerRenderer" parent="Player Block" unique_id=1615866662 instance=ExtResource("1_jvcc5")]
+layout_mode = 2
+
+[node name="PlayerBattleMenu" type="PanelContainer" parent="Player Block" unique_id=869180982]
+layout_mode = 2
