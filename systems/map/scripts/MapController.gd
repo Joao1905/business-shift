@@ -1,6 +1,8 @@
 class_name MapController
 extends Node
 
+var global_turn: int = 0
+var global_stage: int = 0
 @export var root: MapNode
 signal map_node_clicked(node: MapNode)
 var current_node: MapNode = null:
@@ -33,7 +35,8 @@ func notify_node_click(node: MapNode) -> void:
 	for child in node.children:
 		child.state = MapNode.MapNodeState.SELECTABLE
 	
-	map_node_clicked.emit(node)
+	_update_globals(node)
+	map_node_clicked.emit(node)	
 
 
 func _initialize() -> void:
@@ -53,3 +56,12 @@ func _reset_nodes(node: MapNode) -> void:
 	node.initialize()
 	for child in node.children:
 		_reset_nodes(child)
+
+
+func _update_globals(clicked_node: Node) -> void:
+	self.global_turn += 1
+	EventBus.map_turn_ended.emit(self.global_turn)
+	
+	if (clicked_node.coordinates == MapConfigs.FIRST_NODE_COORD):
+		self.global_stage += 1
+		EventBus.stage_started.emit(self.global_stage)
