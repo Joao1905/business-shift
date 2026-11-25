@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameData="*uid://cos1d0n45q34i"
+EventBus="*uid://dg6tfvnqradmd"
 
 [display]
 
@@ -27,11 +28,18 @@ window/stretch/aspect="expand"
 [file_customization]
 
 folder_colors={
+"res://mocks/": "gray",
 "res://systems/": "teal",
+"res://systems/main/scenes/": "orange",
 "res://systems/main/scripts/": "blue",
 "res://systems/map/assets/": "red",
+"res://systems/map/scenes/": "orange",
 "res://systems/map/scripts/": "blue",
+"res://systems/status/employee/": "blue",
+"res://systems/status/event/": "blue",
+"res://systems/status/specific_statuses/": "blue",
 "res://systems/ui/assets/": "red",
+"res://systems/ui/scenes/": "orange",
 "res://systems/ui/scripts/": "blue"
 }
 

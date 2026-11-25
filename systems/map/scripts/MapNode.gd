@@ -28,6 +28,8 @@ func _ready() -> void:
 	
 	if (self.coordinates != MapConfigs.LAST_NODE_COORD):
 		assert(children.size() != 0, MapErrors.UNASSIGNED_CHILDREN_ERROR)
+	# if (self.coordinates == MapConfigs.FIRST_NODE_COORD):
+	# 	map_controller.notify_node_click(self)
 
 
 func initialize() -> void:
