@@ -6,7 +6,7 @@ extends Panel
 
 var _tween: Tween
 
-enum MapNodeType {START, BATTLE, BATTLE_PLUS, SHOP, EVENT, BOSS, FINAL_BOSS}
+enum MapNodeType {START, BATTLE, BATTLE_PLUS, HIRE, EVENT, BOSS, FINAL_BOSS}
 enum MapNodeState {ACTIVE, SELECTABLE, ENABLED, DISABLED, COMPLETED}
 var STATE_STYLES: Dictionary[MapNodeState, Resource] = {}
 
@@ -82,7 +82,7 @@ func _type_to_acronym(type: MapNodeType) -> String:
 		MapNodeType.START: return "St"
 		MapNodeType.BATTLE: return "Ba"
 		MapNodeType.BATTLE_PLUS: return "B+"
-		MapNodeType.SHOP: return "Sh"
+		MapNodeType.HIRE: return "Hr"
 		MapNodeType.EVENT: return "Ev"
 		MapNodeType.BOSS: return "Bo"
 		MapNodeType.FINAL_BOSS: return "MVP"

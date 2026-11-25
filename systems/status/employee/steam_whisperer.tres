@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmployeeDefinition" format=3 uid="uid://cn3b3myoxakku"]
+
+[ext_resource type="Script" uid="uid://t6k4kqgvvv0d" path="res://systems/status/employee/EmployeeDefinition.gd" id="1_3cpu3"]
+
+[resource]
+script = ExtResource("1_3cpu3")
+id = "steam_whisperer"
+display_name = "Steam Whisperer"
+description = "A man of knowledge, ready to improve the efficiency of your machinery. 5% bonus to the Technology attribute after succeeding in a negotiation that uses that attribute as its basis"
+price = 120
+metadata/_custom_type_script = "uid://t6k4kqgvvv0d"

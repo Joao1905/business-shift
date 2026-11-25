@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs8oa5s8erx2s"]
 
-[ext_resource type="FontFile" uid="uid://u3qkggelnyq8" path="res://systems/ui/assets/fonts/PixelifySans-Medium.ttf" id="1_8gqw2"]
+[ext_resource type="FontFile" uid="uid://u3qkggelnyq8" path="res://common/assets/fonts/PixelifySans-Medium.ttf" id="1_8gqw2"]
 [ext_resource type="StyleBox" uid="uid://ds3qvjktg1a17" path="res://systems/map/assets/themes/map_panel.tres" id="2_6u226"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2f8h"]

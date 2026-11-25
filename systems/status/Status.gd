@@ -41,14 +41,14 @@ func _disconnect_other_signals() -> void:
 func _connect_duration() -> void:
 	match duration:
 		Duration.UNTIL_STAGE_END: EventBus.stage_ended.connect(_on_stage_ended)
-		Duration.N_MAP_TURNS:     EventBus.map_turn_ended.connect(_on_turn)
+		Duration.N_MAP_TURNS:     EventBus.map_turn_started.connect(_on_turn)
 		Duration.UNTIL_NEXT_BATTLE: EventBus.battle_resolved.connect(_expire_cb)
 
 func _disconnect_duration() -> void:
 	if EventBus.stage_ended.is_connected(_on_stage_ended):
 		EventBus.stage_ended.disconnect(_on_stage_ended)
-	if EventBus.map_turn_ended.is_connected(_on_turn):
-		EventBus.map_turn_ended.disconnect(_on_turn)
+	if EventBus.map_turn_started.is_connected(_on_turn):
+		EventBus.map_turn_started.disconnect(_on_turn)
 	if EventBus.battle_resolved.is_connected(_expire_cb):
 		EventBus.battle_resolved.disconnect(_expire_cb)
 

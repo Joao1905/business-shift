@@ -6,5 +6,6 @@
 script = ExtResource("1_hrsbm")
 id = "bricklayer"
 display_name = "Bricklayer"
-description = "This young man has never refused manual labor. 3% bonus to the Labor attribute after succeeding in a negotiation that uses that attribute as its basis."
+description = "This young man has never refused manual labor. 3% bonus to the Labor attribute after succeeding in a negotiation that uses that attribute as its basis"
+price = 100
 metadata/_custom_type_script = "uid://t6k4kqgvvv0d"

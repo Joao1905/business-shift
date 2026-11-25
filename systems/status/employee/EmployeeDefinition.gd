@@ -11,6 +11,8 @@ extends Resource
 func build() -> Status:
 	match id:
 		"bricklayer":  return BricklayerStatus.new()
-		# ...
+		"engineer":  return EngineerStatus.new()
+		"steam_whisperer":  return SteamWhispererStatus.new()
+		"three_equal_men":  return ThreeEqualMenStatus.new()
 	push_error("Unknown employee id: %s" % id)
 	return null
