@@ -3,26 +3,25 @@
 [ext_resource type="Script" uid="uid://bhiog2i0ulko6" path="res://systems/battle/scripts/BattleRenderer.gd" id="1_4jhof"]
 [ext_resource type="Script" uid="uid://bf6cxh36cw3lu" path="res://systems/battle/scripts/FactoryRenderer.gd" id="2_jdhqp"]
 
-[node name="BattleRenderer" type="Control" unique_id=799558907]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="BattleRenderer" type="PanelContainer" unique_id=548920817]
+offset_right = 1.0
+offset_bottom = 23.0
 script = ExtResource("1_4jhof")
 
-[node name="Border" type="PanelContainer" parent="." unique_id=1926801922]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Vertical Separator" type="VBoxContainer" parent="Border" unique_id=1926509317]
+[node name="Vertical Separator" type="VBoxContainer" parent="." unique_id=1926509317]
 layout_mode = 2
+theme_override_constants/separation = 12
 
-[node name="FactoryName" type="Label" parent="Border/Vertical Separator" unique_id=419570821]
+[node name="FactoryName" type="Label" parent="Vertical Separator" unique_id=419570821]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Placeholder"
+horizontal_alignment = 1
 
-[node name="FactoryRenderer" type="Node2D" parent="Border/Vertical Separator" unique_id=1366527808]
+[node name="FactoryCanvas" type="Control" parent="Vertical Separator" unique_id=914514016]
+custom_minimum_size = Vector2(200, 150)
+clip_contents = true
+layout_mode = 2
+
+[node name="FactoryRenderer" type="Node2D" parent="Vertical Separator/FactoryCanvas" unique_id=948225896]
 script = ExtResource("2_jdhqp")

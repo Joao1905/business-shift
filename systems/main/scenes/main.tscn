@@ -4,21 +4,26 @@
 [ext_resource type="PackedScene" uid="uid://cw4jcgkjhruqn" path="res://systems/map/scenes/map.tscn" id="2_wn47p"]
 [ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/ui/scenes/title_screen.tscn" id="3_bemvd"]
 [ext_resource type="PackedScene" uid="uid://bc7kk1udac1e8" path="res://systems/battle/scenes/battle.tscn" id="4_bemvd"]
-[ext_resource type="Script" uid="uid://pmue2nibling" path="res://systems/battle/scripts/BattleController.gd" id="5_5ah0n"]
 
-[node name="Main" type="Node2D" unique_id=390530669]
+[node name="Main" type="Control" unique_id=617358997]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_jacyw")
 
 [node name="Map" parent="." unique_id=564566897 instance=ExtResource("2_wn47p")]
 visible = false
 custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
 offset_bottom = 0.0
 
 [node name="TitleScreen" parent="." unique_id=1384893326 instance=ExtResource("3_bemvd")]
 visible = false
-custom_minimum_size = Vector2(1152, 648)
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
 
 [node name="Battle" parent="." unique_id=22246929 instance=ExtResource("4_bemvd")]
-script = ExtResource("5_5ah0n")
+visible = false
+layout_mode = 1

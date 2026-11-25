@@ -16,7 +16,7 @@ func _on_node_clicked(node: MapNode) -> void:
 	main_controller.load_screen(MainController.SCREENS.BATTLE);
 
 func _is_battle(node: MapNode) -> bool:
-	return node.MapNodeType in [
+	return node.type in [
 		MapNode.MapNodeType.BATTLE,
 		 MapNode.MapNodeType.BATTLE_PLUS,
 		 MapNode.MapNodeType.BOSS,

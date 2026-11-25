@@ -1,7 +1,7 @@
 class_name TitleScreen
 extends Control
 
-@onready var main: Node2D = $".."
+@onready var main: Control = $".."
 
 @onready var new_game_button: Button = %NewGameButton
 @onready var factory_dialog: FactoryDialog = %FactoryDialog
