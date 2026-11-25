@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://pmue2nibling" path="res://systems/battle/scripts/BattleController.gd" id="1_bi4tf"]
 [ext_resource type="PackedScene" uid="uid://b1xbbh8h3lie2" path="res://systems/battle/scenes/battle_renderer.tscn" id="1_jvcc5"]
+[ext_resource type="Script" uid="uid://effiiycc1nkb" path="res://systems/battle/scripts/PlayerBattleMenu.gd" id="3_t4afn"]
+[ext_resource type="PackedScene" uid="uid://cvlpfufuq1ovv" path="res://systems/battle/scenes/battle_menu_option.tscn" id="4_ge78g"]
 
 [node name="Battle" type="Control" unique_id=151884238]
 layout_mode = 3
@@ -47,5 +49,19 @@ layout_mode = 2
 [node name="PlayerRenderer" parent="Player Margin/Player Block" unique_id=1615866662 instance=ExtResource("1_jvcc5")]
 layout_mode = 2
 
-[node name="PlayerBattleMenu" type="PanelContainer" parent="Player Margin/Player Block" unique_id=869180982]
+[node name="PlayerBattleMenu" type="VBoxContainer" parent="Player Margin/Player Block" unique_id=886400652]
 layout_mode = 2
+alignment = 1
+script = ExtResource("3_t4afn")
+
+[node name="TakeoverOption" parent="Player Margin/Player Block/PlayerBattleMenu" unique_id=1094989470 instance=ExtResource("4_ge78g")]
+layout_mode = 2
+text = "Takeover"
+
+[node name="ShiftOption" parent="Player Margin/Player Block/PlayerBattleMenu" unique_id=1431367241 instance=ExtResource("4_ge78g")]
+layout_mode = 2
+text = "Shift"
+
+[node name="ReevaluateOption" parent="Player Margin/Player Block/PlayerBattleMenu" unique_id=1668555479 instance=ExtResource("4_ge78g")]
+layout_mode = 2
+text = "Reevaluate"
