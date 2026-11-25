@@ -12,28 +12,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bi4tf")
 
-[node name="Enemy Block" type="HBoxContainer" parent="." unique_id=1955554190]
+[node name="Enemy Margin" type="MarginContainer" parent="." unique_id=305799924]
 layout_mode = 1
-offset_right = 200.0
-offset_bottom = 185.0
+offset_right = 224.0
+offset_bottom = 209.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="EnemyRenderer" parent="Enemy Block" unique_id=799558907 instance=ExtResource("1_jvcc5")]
+[node name="Enemy Block" type="HBoxContainer" parent="Enemy Margin" unique_id=1955554190]
 layout_mode = 2
 
-[node name="Player Block" type="HBoxContainer" parent="." unique_id=679204122]
+[node name="EnemyRenderer" parent="Enemy Margin/Enemy Block" unique_id=799558907 instance=ExtResource("1_jvcc5")]
+layout_mode = 2
+
+[node name="Player Margin" type="MarginContainer" parent="." unique_id=1759461761]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -204.0
-offset_top = -185.0
+offset_left = -216.0
+offset_top = -197.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
 
-[node name="PlayerRenderer" parent="Player Block" unique_id=1615866662 instance=ExtResource("1_jvcc5")]
+[node name="Player Block" type="HBoxContainer" parent="Player Margin" unique_id=679204122]
 layout_mode = 2
 
-[node name="PlayerBattleMenu" type="PanelContainer" parent="Player Block" unique_id=869180982]
+[node name="PlayerRenderer" parent="Player Margin/Player Block" unique_id=1615866662 instance=ExtResource("1_jvcc5")]
+layout_mode = 2
+
+[node name="PlayerBattleMenu" type="PanelContainer" parent="Player Margin/Player Block" unique_id=869180982]
 layout_mode = 2
