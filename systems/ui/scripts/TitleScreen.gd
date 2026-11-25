@@ -18,7 +18,7 @@ func _on_new_game_pressed() -> void:
 func _on_confirmed(factory_name: String) -> void:
 	GameData.factory_name = factory_name
 	factory_dialog.visible = false
-	main.load_screen(main.SCREENS.MAP)
+	main.load_screen(MainController.SCREENS.MAP)
 	
 func _on_dismissed() -> void:
 	factory_dialog.visible = false;

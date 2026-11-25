@@ -1,10 +1,13 @@
 class_name Player
 
-const LABOR: int = 0
-const TECH: int = 1
-const PRODUCTION: int = 2
+enum BUSINESS_MODELS {LABOR = 0, TECH = 1, PRODUCTION = 2}
 
-var base_stats: Dictionary = {LABOR: 10, TECH: 10, PRODUCTION: 10}
+var current_business_model: int = BUSINESS_MODELS.LABOR
+var base_stats: Dictionary = {
+	BUSINESS_MODELS.LABOR: 10,
+	BUSINESS_MODELS.TECH: 10,
+	BUSINESS_MODELS.PRODUCTION: 10
+}
 var active_status: Array[Status] = []  # can be Array, O(n) is irrelevant for ~20 statuses
 
 # Called whenever you want to calculate attributes based on active status
@@ -42,6 +45,7 @@ func apply_status(e: Status) -> void:
 		return
 	if e.stack_policy == Status.StackPolicy.REJECT and has_status(e.definition_id):
 		return
+	print("status appended")
 	active_status.append(e)
 	e.activate(self)
 

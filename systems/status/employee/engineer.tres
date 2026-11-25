@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmployeeDefinition" format=3 uid="uid://c4invvbvumo26"]
+
+[ext_resource type="Script" uid="uid://t6k4kqgvvv0d" path="res://systems/status/employee/EmployeeDefinition.gd" id="1_g5fx7"]
+
+[resource]
+script = ExtResource("1_g5fx7")
+id = "engineer"
+display_name = "Engineer"
+description = "Using ancient chants, this being summons that which lives beyond the smoke. After making your company's business model Production for 5 consecutive encounters, receives a 10% bonus on Production. If they change business model, they suffer a 5% penalty to the other two attributes"
+price = 100
+metadata/_custom_type_script = "uid://t6k4kqgvvv0d"

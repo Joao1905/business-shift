@@ -60,7 +60,7 @@ func _reset_nodes(node: MapNode) -> void:
 
 func _update_globals(clicked_node: Node) -> void:
 	self.global_turn += 1
-	EventBus.map_turn_ended.emit(self.global_turn)
+	EventBus.map_turn_started.emit(self.global_turn)
 	
 	if (clicked_node.coordinates == MapConfigs.FIRST_NODE_COORD):
 		self.global_stage += 1

@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://dak3q5omt8p7x"]
+
+[ext_resource type="Script" uid="uid://bh1etpuyqsvji" path="res://systems/hire/scripts/HireController.gd" id="1_k3sku"]
+[ext_resource type="FontFile" uid="uid://cd411qua0m3mj" path="res://common/assets/fonts/PixelifySans-Medium.ttf" id="1_n5obp"]
+[ext_resource type="PackedScene" uid="uid://de8ecija166sc" path="res://systems/hire/scenes/card.tscn" id="3_44dvx"]
+[ext_resource type="Script" uid="uid://jc32mnwfbn14" path="res://systems/hire/scripts/SkipButton.gd" id="6_rk3se"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44dvx"]
+bg_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3sku"]
+bg_color = Color(0.1484375, 0.1484375, 0.1484375, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rk3se"]
+bg_color = Color(0.203125, 0.203125, 0.203125, 1)
+
+[node name="HireScreen" type="Control" unique_id=650434479]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_k3sku")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1457382256]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.019097222
+anchor_top = -0.024691358
+anchor_right = 1.0138888
+anchor_bottom = 1.037037
+offset_left = 0.7638889
+offset_top = 0.9876543
+offset_right = 1111.4445
+offset_bottom = 606.5185
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1960937085]
+layout_mode = 2
+
+[node name="ScreenTitle" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1505765115]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("1_n5obp")
+theme_override_font_sizes/font_size = 48
+text = "hire"
+horizontal_alignment = 1
+
+[node name="ScreenContent" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=430995063]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CardMargin" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScreenContent" unique_id=296482688]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Card" parent="MarginContainer/VBoxContainer/ScreenContent/CardMargin" unique_id=1252219234 instance=ExtResource("3_44dvx")]
+layout_mode = 2
+
+[node name="CardMargin2" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScreenContent" unique_id=1474705017]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Card" parent="MarginContainer/VBoxContainer/ScreenContent/CardMargin2" unique_id=1863659758 instance=ExtResource("3_44dvx")]
+layout_mode = 2
+
+[node name="CardMargin3" type="MarginContainer" parent="MarginContainer/VBoxContainer/ScreenContent" unique_id=406120544]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Card" parent="MarginContainer/VBoxContainer/ScreenContent/CardMargin3" unique_id=861107725 instance=ExtResource("3_44dvx")]
+layout_mode = 2
+
+[node name="SkipButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=614624475]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_colors/font_focus_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_colors/font_hover_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("1_n5obp")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_44dvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k3sku")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rk3se")
+text = "skip"
+script = ExtResource("6_rk3se")

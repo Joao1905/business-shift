@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://de8ecija166sc"]
+
+[ext_resource type="StyleBox" uid="uid://b06h4sbn5pqm0" path="res://systems/hire/assets/themes/card_theme.tres" id="1_dj1kv"]
+[ext_resource type="Script" uid="uid://c3fo5oj6xdgrx" path="res://systems/hire/scripts/HireCard.gd" id="2_alwss"]
+[ext_resource type="FontFile" uid="uid://cd411qua0m3mj" path="res://common/assets/fonts/PixelifySans-Medium.ttf" id="3_wxtnb"]
+[ext_resource type="FontFile" uid="uid://bylmhi1b4mo0u" path="res://common/assets/fonts/PixelifySans-Regular.ttf" id="4_5l4yd"]
+
+[node name="Card" type="Panel" unique_id=1252219234]
+theme_override_styles/panel = ExtResource("1_dj1kv")
+script = ExtResource("2_alwss")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1759769421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardTitleMargin" type="MarginContainer" parent="VBoxContainer" unique_id=2142908482]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CardTitle" type="Label" parent="VBoxContainer/CardTitleMargin" unique_id=354635472]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("3_wxtnb")
+theme_override_font_sizes/font_size = 20
+text = "title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardDescriptionMargin" type="MarginContainer" parent="VBoxContainer" unique_id=666067692]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CardDescription" type="Label" parent="VBoxContainer/CardDescriptionMargin" unique_id=627800835]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("4_5l4yd")
+text = "This young man has never refused manual labor. 3% bonus to the Labor attribute after succeeding in a negotiation that uses that attribute as its basis."
+autowrap_mode = 3
+
+[node name="CardCostMargin" type="MarginContainer" parent="VBoxContainer" unique_id=281184331]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CardCost" type="Label" parent="VBoxContainer/CardCostMargin" unique_id=254301406]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8784314, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("3_wxtnb")
+theme_override_font_sizes/font_size = 20
+text = "$ 300"
+horizontal_alignment = 1
+vertical_alignment = 1

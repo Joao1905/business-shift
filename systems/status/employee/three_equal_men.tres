@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EmployeeDefinition" format=3 uid="uid://c28co05f7mtd3"]
+
+[ext_resource type="Script" uid="uid://t6k4kqgvvv0d" path="res://systems/status/employee/EmployeeDefinition.gd" id="1_ddjyv"]
+
+[resource]
+script = ExtResource("1_ddjyv")
+id = "three_equal_men"
+display_name = "Three Equal Men"
+description = "No schooling, only the will to learn. After changing your business model three times during a stage, the player receives a 5% bonus to the TOTAL of each of their three company attributes. This can be repeated after each stage"
+price = 120
+metadata/_custom_type_script = "uid://t6k4kqgvvv0d"
