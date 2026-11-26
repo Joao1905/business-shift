@@ -1,6 +1,6 @@
 extends Node
 
-var factory_name: String = ""
+var factory: Factory = null
 var current_node: MapNode = null
 
 func _ready() -> void:

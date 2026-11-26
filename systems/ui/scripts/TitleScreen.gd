@@ -16,7 +16,12 @@ func _on_new_game_pressed() -> void:
 	factory_dialog.visible = true
 
 func _on_confirmed(factory_name: String) -> void:
-	GameData.factory_name = factory_name
+	# Initialize factory
+	GameData.factory = Factory.new()
+	GameData.factory.factory_name = factory_name
+	GameData.factory.factory_stats = FactoryStats.initialize_stats(10, 10, 10)
+	
+	# Set Visible
 	factory_dialog.visible = false
 	main.load_screen(main.SCREENS.MAP)
 	
