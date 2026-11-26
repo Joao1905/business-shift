@@ -1,21 +1,23 @@
 class_name FactoryStats
 extends RefCounted
 
-var initialized: bool = false
-var labor: int
-var technology: int
-var production: int
+enum EStats {
+	Labor = 1,
+	Technology = 2,
+	Production = 3
+}
 
-func _init(l: int, t: int, p: int) -> void:
-	labor = l
-	technology = t
-	production = p
+var initialized: bool = false
+var stats : Dictionary[EStats, int]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 static func initialize_stats(labor: int, technology: int, production: int) -> FactoryStats:
-	var stats = new(labor, technology, production)
-	stats.initialized = true
-	return stats
+	var statsObj = new()
+	statsObj.initialized = true
+	statsObj.stats[EStats.Labor] = labor
+	statsObj.stats[EStats.Technology] = technology
+	statsObj.stats[EStats.Production] = production
+	return statsObj
