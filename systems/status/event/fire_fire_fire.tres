@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventDefinition" format=3 uid="uid://cpt4pxhqcyyyj"]
+
+[ext_resource type="Script" uid="uid://cidfrqnt1c68k" path="res://systems/status/event/EventDefinition.gd" id="1_lu108"]
+
+[resource]
+script = ExtResource("1_lu108")
+id = "fire_fire_fire"
+display_name = "Fire Fire Fire"
+description = "A major fire broke out, but your factory was the first industry to be rescued, which cannot be said for the rest of the industrial district. The player's company receives a -10% penalty to the TOTAL value of the Labor attribute, while competing industries are penalized with -15% to the TOTAL value of the Labor attribute until the end of this stage"
+metadata/_custom_type_script = "uid://cidfrqnt1c68k"

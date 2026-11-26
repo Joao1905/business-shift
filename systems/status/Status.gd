@@ -1,6 +1,7 @@
 class_name Status
 extends RefCounted
 
+enum Target { PLAYER, OPPONENT, BOTH}
 enum Duration { PERMANENT, UNTIL_STAGE_END, N_MAP_TURNS, UNTIL_NEXT_BATTLE }
 enum State    { PENDING, ACTIVE, APPLIED, EXPIRED }
 enum StackPolicy { REJECT, STACK }
@@ -30,23 +31,21 @@ func _on_activate() -> void:
 func _on_expire() -> void:
 	pass  # override: revert flags
 
-func get_modifiers() -> Array[StatModifier]:
-	return []  # override
+func get_player_modifiers()   -> Array[StatModifier]: return []  # override
+func get_opponent_modifiers() -> Array[StatModifier]: return []  # override
 
 func _disconnect_other_signals() -> void:
 	pass  # override: disconnect all connected signals from overridden functions
 
-
-
 func _connect_duration() -> void:
 	match duration:
-		Duration.UNTIL_STAGE_END: EventBus.stage_ended.connect(_on_stage_ended)
+		Duration.UNTIL_STAGE_END: EventBus.stage_started.connect(_on_stage_ended)
 		Duration.N_MAP_TURNS:     EventBus.map_turn_started.connect(_on_turn)
 		Duration.UNTIL_NEXT_BATTLE: EventBus.battle_resolved.connect(_expire_cb)
 
 func _disconnect_duration() -> void:
-	if EventBus.stage_ended.is_connected(_on_stage_ended):
-		EventBus.stage_ended.disconnect(_on_stage_ended)
+	if EventBus.stage_started.is_connected(_on_stage_ended):
+		EventBus.stage_started.disconnect(_on_stage_ended)
 	if EventBus.map_turn_started.is_connected(_on_turn):
 		EventBus.map_turn_started.disconnect(_on_turn)
 	if EventBus.battle_resolved.is_connected(_expire_cb):
@@ -63,5 +62,5 @@ func expire() -> void:
 	state = State.EXPIRED
 	_disconnect_duration()
 	_disconnect_other_signals()
-	player.active_effects.erase(self)
+	player.active_status.erase(self)
 	_on_expire()

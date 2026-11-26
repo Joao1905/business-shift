@@ -1,11 +1,11 @@
-class_name EngineerStatus
+class_name BricklayerStatus
 extends Status
 
 var _earned_bonus: bool = false
 
 func _init() -> void:
-	definition_id = "engineer"
-	display_name  = "engineer"
+	definition_id = "bricklayer"
+	display_name  = "Bricklayer"
 	stack_policy  = StackPolicy.STACK
 	duration      = Duration.PERMANENT
 
@@ -17,13 +17,14 @@ func _disconnect_other_signals() -> void:
 		EventBus.battle_won.disconnect(_on_battle_won)
 
 func _on_battle_won(_opp, attr) -> void:
-	if attr == Player.BUSINESS_MODELS.TECH:
+	if attr == Player.BUSINESS_MODELS.LABOR:
 		_earned_bonus = true
 
-func get_modifiers() -> Array[StatModifier]:
+func get_player_modifiers() -> Array[StatModifier]:
 	if not _earned_bonus: return []
 	var m: StatModifier = StatModifier.new()
-	m.attribute = StatModifier.Attribute.TECH
+	m.display_name = self.display_name
+	m.attribute = StatModifier.Attribute.LABOR
 	m.mode = StatModifier.Mode.PERCENT
-	m.value = 0.05
+	m.value = 0.03
 	return [m]

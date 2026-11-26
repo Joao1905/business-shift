@@ -32,6 +32,9 @@ folder_colors={
 "res://common/assets/": "red",
 "res://mocks/": "gray",
 "res://systems/": "teal",
+"res://systems/events/assets/": "red",
+"res://systems/events/scenes/": "orange",
+"res://systems/events/scripts/": "blue",
 "res://systems/hire/assets/": "red",
 "res://systems/hire/scenes/": "orange",
 "res://systems/hire/scripts/": "blue",
@@ -42,7 +45,7 @@ folder_colors={
 "res://systems/map/scripts/": "blue",
 "res://systems/status/employee/": "blue",
 "res://systems/status/event/": "blue",
-"res://systems/status/specific_statuses/": "blue",
+"res://systems/status/statuses/": "blue",
 "res://systems/ui/assets/": "red",
 "res://systems/ui/scenes/": "orange",
 "res://systems/ui/scripts/": "blue"

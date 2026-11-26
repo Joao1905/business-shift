@@ -10,7 +10,7 @@ var _earned_bonus: bool = false
 
 func _init() -> void:
 	definition_id = "steam_whisperer"
-	display_name = "steam whisperer"
+	display_name = "Steam Whisperer"
 	stack_policy = StackPolicy.STACK
 	duration     = Duration.PERMANENT
 
@@ -41,7 +41,7 @@ func _on_model_changed(_new_model: int, _old_model: int) -> void:
 
 # modifiers
 
-func get_modifiers() -> Array[StatModifier]:
+func get_player_modifiers() -> Array[StatModifier]:
 	var out: Array[StatModifier] = []
 
 	if _earned_bonus:
@@ -55,7 +55,7 @@ func get_modifiers() -> Array[StatModifier]:
 
 func _make_mod(attr: int, value: float) -> StatModifier:
 	var m: StatModifier = StatModifier.new()
-	m.display_name = display_name
+	m.display_name = self.display_name
 	m.attribute = attr
 	m.mode = StatModifier.Mode.PERCENT
 	m.value = value
