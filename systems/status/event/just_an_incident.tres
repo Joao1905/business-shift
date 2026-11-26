@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventDefinition" format=3 uid="uid://doepmgf2hv1tq"]
+
+[ext_resource type="Script" uid="uid://cidfrqnt1c68k" path="res://systems/status/event/EventDefinition.gd" id="1_nvmke"]
+
+[resource]
+script = ExtResource("1_nvmke")
+id = "just_an_incident"
+display_name = "Just an Incident"
+description = "Little Timmy got stuck again trying to fix the textile conveyor belt. The player's industry receives a -5% penalty to the TOTAL value of the Production and Labor attributes until the end of this stage"
+metadata/_custom_type_script = "uid://cidfrqnt1c68k"

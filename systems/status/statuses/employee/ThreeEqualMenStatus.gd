@@ -13,7 +13,7 @@ var _used_business_models: Dictionary[Player.BUSINESS_MODELS, bool] = {
 
 func _init() -> void:
 	definition_id = "three_equal_men"
-	display_name  = "three equal men"
+	display_name  = "Three Equal Men"
 	stack_policy  = StackPolicy.STACK
 	duration      = Duration.PERMANENT
 
@@ -41,9 +41,10 @@ func _on_business_model_changed(new_model: Player.BUSINESS_MODELS, old_model: Pl
 		_n_earned_bonuses += 1
 		_already_earned_this_stage = true
 
-func get_modifiers() -> Array[StatModifier]:
+func get_player_modifiers() -> Array[StatModifier]:
 	if not _n_earned_bonuses: return []
 	var m: StatModifier = StatModifier.new()
+	m.display_name = self.display_name
 	m.attribute = StatModifier.Attribute.ALL
 	m.mode = StatModifier.Mode.PERCENT
 	m.value = ALL_BONUS * _n_earned_bonuses

@@ -2,11 +2,12 @@ class_name MainController
 extends Node
 
 var player: Player
-enum SCREENS {MAP, TITLE, HIRE}
+enum SCREENS {MAP, TITLE, HIRE, EVENT}
 @onready var screen_to_node: Dictionary[SCREENS, Node] = {
 	SCREENS.MAP: $Map,
 	SCREENS.TITLE: $TitleScreen,
 	SCREENS.HIRE: $HireScreen,
+	SCREENS.EVENT: $EventScreen,
 }
 
 var visible_screen: Node = null
@@ -31,9 +32,11 @@ func _hide_all_screens() -> void:
 		screen.visible = false
 
 func _on_map_node_clicked(node: MapNode) -> void:
-	print(player.active_status)
 	match node.type:
 		MapNode.MapNodeType.HIRE:
-			screen_to_node[SCREENS.HIRE].generate_random_cards()
+			screen_to_node[SCREENS.HIRE].initialize()
 			load_screen(SCREENS.HIRE)
+		MapNode.MapNodeType.EVENT:
+			screen_to_node[SCREENS.EVENT].initialize()
+			load_screen(SCREENS.EVENT)
 		_: return

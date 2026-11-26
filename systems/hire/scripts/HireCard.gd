@@ -9,7 +9,6 @@ signal card_chosen(employee_def: EmployeeDefinition)
 @onready var card_cost: Label = $VBoxContainer/CardCostMargin/CardCost
 
 func _ready() -> void:
-	gui_input.connect(_on_gui_input)
 	_handle_subscriptions()
 
 func update_data(employee_def: EmployeeDefinition) -> void:
@@ -21,6 +20,7 @@ func update_data(employee_def: EmployeeDefinition) -> void:
 func _handle_subscriptions() -> void:
 	mouse_entered.connect(_animate_on_hover.bind(true))
 	mouse_exited.connect(_animate_on_hover.bind(false))
+	gui_input.connect(_on_gui_input)
 
 func _animate_on_hover(hovered: bool) -> void:
 	if _tween:

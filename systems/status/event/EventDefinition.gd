@@ -8,8 +8,9 @@ extends Resource
 
 func build() -> Array[Status]:
 	match id:
-		"heavy_thunder":
-			return []
+		"heavy_thunder":    return [HeavyThunderStatus.new()]
+		"just_an_incident": return [JustAnIncidentStatus.new()]
+		"fire_fire_fire":   return [FireFireFireStatus.new()]
 		# ...
 	push_error("Unknown event id: %s" % id)
 	return []

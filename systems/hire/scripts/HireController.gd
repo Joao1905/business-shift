@@ -1,6 +1,8 @@
 extends Control
 
 @onready var main: Node2D = $".."
+@onready var balance: Label = $MarginContainer/Balance
+
 var cards: Array[Panel] = []
 var employee_definitions: Array[EmployeeDefinition] = []
 
@@ -20,7 +22,11 @@ func _ready() -> void:
 	for card in cards:
 		card.card_chosen.connect(on_card_click)
 
-func generate_random_cards() -> void:
+func initialize() -> void:
+	_generate_random_cards()
+	balance.update_balance_text(main.player.get_balance())
+	
+func _generate_random_cards() -> void:
 	var chosen_employees: Array[EmployeeDefinition] = _pick_random(cards.size())
 	for i in cards.size():
 		cards[i].update_data(chosen_employees[i])
@@ -29,9 +35,11 @@ func exit() -> void:
 	main.load_screen(MainController.SCREENS.MAP)
 
 func on_card_click(employee_def: EmployeeDefinition):
+	if not main.player.try_spend_money(employee_def.price):
+		return
+		
 	var employee: Status = employee_def.build()
 	main.player.apply_status(employee)
-	print("player.apply_status called: "+employee.definition_id)
 	exit()
 
 func _pick_random(n: int = 3) -> Array[EmployeeDefinition]:

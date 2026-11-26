@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cw4jcgkjhruqn" path="res://systems/map/scenes/map.tscn" id="2_wn47p"]
 [ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/ui/scenes/title_screen.tscn" id="3_bemvd"]
 [ext_resource type="PackedScene" uid="uid://dak3q5omt8p7x" path="res://systems/hire/scenes/hire_screen.tscn" id="4_wn47p"]
+[ext_resource type="PackedScene" uid="uid://eui1k0ioen3m" path="res://systems/events/scenes/event_screen.tscn" id="5_5ah0n"]
 
 [node name="Main" type="Node2D" unique_id=390530669]
 script = ExtResource("1_jacyw")
@@ -20,4 +21,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="HireScreen" parent="." unique_id=650434479 instance=ExtResource("4_wn47p")]
+visible = false
+
+[node name="EventScreen" parent="." unique_id=263073007 instance=ExtResource("5_5ah0n")]
 visible = false

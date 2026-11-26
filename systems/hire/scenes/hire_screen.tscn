@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bh1etpuyqsvji" path="res://systems/hire/scripts/HireController.gd" id="1_k3sku"]
 [ext_resource type="FontFile" uid="uid://cd411qua0m3mj" path="res://common/assets/fonts/PixelifySans-Medium.ttf" id="1_n5obp"]
 [ext_resource type="PackedScene" uid="uid://de8ecija166sc" path="res://systems/hire/scenes/card.tscn" id="3_44dvx"]
+[ext_resource type="Script" uid="uid://c2dlaet0emxrp" path="res://systems/hire/scripts/Balance.gd" id="5_k3sku"]
 [ext_resource type="Script" uid="uid://jc32mnwfbn14" path="res://systems/hire/scripts/SkipButton.gd" id="6_rk3se"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44dvx"]
@@ -104,3 +105,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_k3sku")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rk3se")
 text = "skip"
 script = ExtResource("6_rk3se")
+
+[node name="Balance" type="Label" parent="MarginContainer" unique_id=164979569]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.8509804, 1, 0.7411765, 1)
+theme_override_fonts/font = ExtResource("1_n5obp")
+theme_override_font_sizes/font_size = 20
+text = "$"
+script = ExtResource("5_k3sku")

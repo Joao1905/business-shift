@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EventDefinition" format=3 uid="uid://nekvtifnamw0"]
+
+[ext_resource type="Script" uid="uid://cidfrqnt1c68k" path="res://systems/status/event/EventDefinition.gd" id="1_tn7j0"]
+
+[resource]
+script = ExtResource("1_tn7j0")
+id = "heavy_thunder"
+display_name = "Heavy Thunder"
+description = "A storm devastates the city; fortunately, your industry was unaffected. Competing industries have a -5% penalty to the TOTAL value of the Production attribute until the end of this stage"
+metadata/_custom_type_script = "uid://cidfrqnt1c68k"
