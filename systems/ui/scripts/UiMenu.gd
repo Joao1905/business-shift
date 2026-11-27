@@ -13,16 +13,6 @@ func _on_visibility_changed() -> void:
 	submenu_selected(self)
 
 func submenu_selected(option: BaseUiMenu) -> void:
-	# Hide all children BaseUiMenu, recursively
-	# Show provided BaseUiMenu, hide self's "Components" if it exists, show all immediate BaseUiMenu (BaseUiMenu.show_children())
-	# ---
-	# Option B (Lazy): Assume we only need to fix the surroundings
-	# (X) ON INITIALIZE: Hide all BaseUiMenu, once.
-	# Hide option and its siblings
-	# Show option (but hide Components)
-	# Show option's children BaseUiMenu (immediate only)
-	# Focus first element normally
-
 	# Hide option's siblings, if any
 	option.hide_siblings()
 	
