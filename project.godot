@@ -33,6 +33,8 @@ folder_colors={
 "res://systems/main/scripts/": "blue",
 "res://systems/map/assets/": "red",
 "res://systems/map/scripts/": "blue",
+"res://systems/title/assets/": "red",
+"res://systems/title/scripts/": "blue",
 "res://systems/ui/assets/": "red",
 "res://systems/ui/scripts/": "blue"
 }

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cdevqjipkdm2p"]
 
-[ext_resource type="Script" uid="uid://b02y3yd5kkv64" path="res://systems/ui/scripts/TitleScreen.gd" id="1_47r50"]
-[ext_resource type="Theme" uid="uid://dykjuhwt7w5ir" path="res://systems/ui/assets/themes/ui_theme.tres" id="1_rdefx"]
-[ext_resource type="PackedScene" uid="uid://bqw25cyxwiyag" path="res://systems/ui/scenes/factory_dialog.tscn" id="1_uf4yk"]
+[ext_resource type="Script" uid="uid://b02y3yd5kkv64" path="res://systems/title/scripts/TitleScreen.gd" id="1_47r50"]
+[ext_resource type="Theme" uid="uid://dykjuhwt7w5ir" path="res://systems/title/assets/themes/ui_theme.tres" id="1_rdefx"]
+[ext_resource type="PackedScene" uid="uid://bqw25cyxwiyag" path="res://systems/title/scenes/factory_dialog.tscn" id="1_uf4yk"]
 
 [node name="TitleScreen" type="Control" unique_id=1384893326]
 layout_mode = 3

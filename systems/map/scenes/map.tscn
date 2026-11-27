@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw4jcgkjhruqn"]
 
-[ext_resource type="FontFile" uid="uid://u3qkggelnyq8" path="res://systems/ui/assets/fonts/PixelifySans-Medium.ttf" id="1_aeeei"]
+[ext_resource type="FontFile" uid="uid://u3qkggelnyq8" path="res://systems/title/assets/fonts/PixelifySans-Medium.ttf" id="1_aeeei"]
 [ext_resource type="Script" uid="uid://bprlsopbfkqsg" path="res://systems/map/scripts/MapController.gd" id="1_cctlr"]
 [ext_resource type="StyleBox" uid="uid://ds3qvjktg1a17" path="res://systems/map/assets/themes/map_panel.tres" id="2_ervbc"]
 [ext_resource type="StyleBox" uid="uid://l4p4wtkqtc8g" path="res://systems/map/assets/themes/map_node_enabled_selectable.tres" id="3_5rv6d"]

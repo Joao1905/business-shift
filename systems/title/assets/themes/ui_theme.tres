@@ -1,8 +1,8 @@
 [gd_resource type="Theme" format=3 uid="uid://dykjuhwt7w5ir"]
 
-[ext_resource type="StyleBox" uid="uid://bmd53vlntpdyr" path="res://systems/ui/assets/themes/ui_dialog_panel.tres" id="1_1681a"]
-[ext_resource type="FontFile" uid="uid://dx0esoc38rutd" path="res://systems/ui/assets/fonts/PixelifySans-Bold.ttf" id="2_u8wne"]
-[ext_resource type="FontFile" uid="uid://u3qkggelnyq8" path="res://systems/ui/assets/fonts/PixelifySans-Medium.ttf" id="3_xnd5n"]
+[ext_resource type="StyleBox" uid="uid://bmd53vlntpdyr" path="res://systems/title/assets/themes/ui_dialog_panel.tres" id="1_1681a"]
+[ext_resource type="FontFile" uid="uid://dx0esoc38rutd" path="res://systems/title/assets/fonts/PixelifySans-Bold.ttf" id="2_u8wne"]
+[ext_resource type="FontFile" uid="uid://u3qkggelnyq8" path="res://systems/title/assets/fonts/PixelifySans-Medium.ttf" id="3_xnd5n"]
 
 [resource]
 default_font = ExtResource("3_xnd5n")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bqw25cyxwiyag"]
 
-[ext_resource type="Theme" uid="uid://dykjuhwt7w5ir" path="res://systems/ui/assets/themes/ui_theme.tres" id="1_4wgja"]
-[ext_resource type="Script" uid="uid://b8773qy6n2gd4" path="res://systems/ui/scripts/FactoryDialog.gd" id="1_dlgd3"]
+[ext_resource type="Theme" uid="uid://dykjuhwt7w5ir" path="res://systems/title/assets/themes/ui_theme.tres" id="1_4wgja"]
+[ext_resource type="Script" uid="uid://b8773qy6n2gd4" path="res://systems/title/scripts/FactoryDialog.gd" id="1_dlgd3"]
 
 [node name="FactoryDialog" type="PanelContainer" unique_id=2056295604]
 offset_right = 169.0

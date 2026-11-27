@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cvlpfufuq1ovv"]
+
+[ext_resource type="Script" uid="uid://bgwytdawktrxr" path="res://systems/ui/scripts/UiMenuOption.gd" id="1_6p5o5"]
+
+[node name="UiMenuOption" type="VBoxContainer" unique_id=1410523826]
+offset_right = 25.0
+offset_bottom = 23.0
+script = ExtResource("1_6p5o5")
+
+[node name="Components" type="HBoxContainer" parent="." unique_id=899418017]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Arrow" type="Label" parent="Components" unique_id=1103299027]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+text = "▶"
+
+[node name="Button" type="Button" parent="Components" unique_id=704269331]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

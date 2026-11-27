@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsicj1xxdvanm" path="res://systems/main/scripts/MainController.gd" id="1_jacyw"]
 [ext_resource type="PackedScene" uid="uid://cw4jcgkjhruqn" path="res://systems/map/scenes/map.tscn" id="2_wn47p"]
-[ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/ui/scenes/title_screen.tscn" id="3_bemvd"]
+[ext_resource type="PackedScene" uid="uid://cdevqjipkdm2p" path="res://systems/title/scenes/title_screen.tscn" id="3_bemvd"]
 [ext_resource type="PackedScene" uid="uid://bc7kk1udac1e8" path="res://systems/battle/scenes/battle.tscn" id="4_bemvd"]
 
 [node name="Main" type="Control" unique_id=617358997]

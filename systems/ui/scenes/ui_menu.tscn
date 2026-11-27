@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cp817ru7a0ay3"]
+
+[ext_resource type="Script" uid="uid://5wwlgmp23cwg" path="res://systems/ui/scripts/UiMenu.gd" id="1_tlb5a"]
+
+[node name="UiMenu" type="VBoxContainer" unique_id=1051973593]
+script = ExtResource("1_tlb5a")
