@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FactoryStatsData" format=3 uid="uid://btwo7ytrwwyda"]
+
+[ext_resource type="Script" uid="uid://bhrd6bshm60yq" path="res://systems/main/scripts/core/FactoryStatsData.gd" id="1_v4j30"]
+
+[resource]
+script = ExtResource("1_v4j30")
+kind = 2
+label = "Production"
+color = Color(0.8901961, 0.6627451, 0.09019608, 1)
+metadata/_custom_type_script = "uid://bhrd6bshm60yq"

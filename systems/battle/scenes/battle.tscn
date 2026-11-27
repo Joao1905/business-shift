@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://pmue2nibling" path="res://systems/battle/scripts/BattleController.gd" id="1_bi4tf"]
 [ext_resource type="PackedScene" uid="uid://b1xbbh8h3lie2" path="res://systems/battle/scenes/battle_renderer.tscn" id="1_jvcc5"]
+[ext_resource type="Script" uid="uid://cl0lw1v0v3ltc" path="res://systems/battle/scripts/BattleMenu.gd" id="3_3wv5h"]
 [ext_resource type="PackedScene" uid="uid://cp817ru7a0ay3" path="res://systems/ui/scenes/ui_menu.tscn" id="3_ge78g"]
 [ext_resource type="PackedScene" uid="uid://cvlpfufuq1ovv" path="res://systems/ui/scenes/ui_menu_option.tscn" id="4_ge78g"]
+
+[sub_resource type="Theme" id="Theme_3wv5h"]
 
 [node name="Battle" type="Control" unique_id=151884238]
 layout_mode = 3
@@ -49,29 +52,27 @@ layout_mode = 2
 [node name="PlayerRenderer" parent="Player Margin/Player Block" unique_id=1615866662 instance=ExtResource("1_jvcc5")]
 layout_mode = 2
 
-[node name="PlayerBattleMenu" parent="Player Margin/Player Block" unique_id=1051973593 instance=ExtResource("3_ge78g")]
+[node name="BattleMenu" type="CenterContainer" parent="Player Margin/Player Block" unique_id=240150257]
 layout_mode = 2
+script = ExtResource("3_3wv5h")
 
-[node name="TakeoverOption" parent="Player Margin/Player Block/PlayerBattleMenu" unique_id=1094989470 instance=ExtResource("4_ge78g")]
+[node name="PlayerBattleMenu" parent="Player Margin/Player Block/BattleMenu" unique_id=1051973593 instance=ExtResource("3_ge78g")]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_3wv5h")
+
+[node name="TakeoverOption" parent="Player Margin/Player Block/BattleMenu/PlayerBattleMenu" unique_id=1094989470 instance=ExtResource("4_ge78g")]
 layout_mode = 2
 text = "Takeover"
+color = Color(1, 1, 1, 1)
 
-[node name="ShiftOption" parent="Player Margin/Player Block/PlayerBattleMenu" unique_id=1431367241 instance=ExtResource("4_ge78g")]
+[node name="ShiftOption" parent="Player Margin/Player Block/BattleMenu/PlayerBattleMenu" unique_id=1431367241 instance=ExtResource("4_ge78g")]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Shift"
+color = Color(1, 1, 1, 1)
 
-[node name="LaborOption" parent="Player Margin/Player Block/PlayerBattleMenu/ShiftOption" unique_id=959759254 instance=ExtResource("4_ge78g")]
-layout_mode = 2
-text = "Labor"
-
-[node name="TechnologyOption" parent="Player Margin/Player Block/PlayerBattleMenu/ShiftOption" unique_id=1671852715 instance=ExtResource("4_ge78g")]
-layout_mode = 2
-text = "Technology"
-
-[node name="ProductionOption" parent="Player Margin/Player Block/PlayerBattleMenu/ShiftOption" unique_id=1654066317 instance=ExtResource("4_ge78g")]
-layout_mode = 2
-text = "Production"
-
-[node name="ReevaluateOption" parent="Player Margin/Player Block/PlayerBattleMenu" unique_id=1668555479 instance=ExtResource("4_ge78g")]
+[node name="ReevaluateOption" parent="Player Margin/Player Block/BattleMenu/PlayerBattleMenu" unique_id=1668555479 instance=ExtResource("4_ge78g")]
 layout_mode = 2
 text = "Reevaluate"
+color = Color(1, 1, 1, 1)

@@ -11,10 +11,10 @@ func _process(delta: float) -> void:
 	pass
 
 func hide_siblings() -> void:
-	for child: CanvasItem in get_parent().find_children("*", "UiMenuOption", false):
+	for child: CanvasItem in get_parent().find_children("*", "UiMenuOption", false, false):
 		child.visible = false
 	self.visible = true
 
 func show_immediate_options() -> void:
-	for child: CanvasItem in find_children("*", "UiMenuOption", false):
+	for child: CanvasItem in find_children("*", "UiMenuOption", false, false):
 		child.visible = true

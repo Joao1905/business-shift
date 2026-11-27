@@ -6,6 +6,7 @@
 offset_right = 25.0
 offset_bottom = 23.0
 script = ExtResource("1_6p5o5")
+color = null
 
 [node name="Components" type="HBoxContainer" parent="." unique_id=899418017]
 unique_name_in_owner = true

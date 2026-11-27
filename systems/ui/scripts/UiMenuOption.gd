@@ -2,12 +2,26 @@
 class_name UiMenuOption
 extends BaseUiMenu
 
+# Scene Factory
+const SCENE_PATH := "res://systems/ui/scenes/ui_menu_option.tscn"
+static func create(text: String, color: Color) -> UiMenuOption:
+	var menu_option := (load(SCENE_PATH) as PackedScene).instantiate() as UiMenuOption
+	menu_option.text = text
+	menu_option.color = color
+	return menu_option
+
 # Input text
 @export var text: String = "":
 	set(value):
 		text = value
 		if is_node_ready():
 			button.text = text
+
+@export var color: Color = Color.WHITE:
+	set(value):
+		color = value
+		if is_node_ready():
+			_apply_color()
 
 # Retrieve element refs
 @onready var arrow : Label = %Arrow;
@@ -23,9 +37,13 @@ func _ready() -> void:
 	button.pressed.connect(_select_button_option)
 	
 	# Arrow handling
+	_apply_color()
 	arrow.modulate.a = 0.0
 	button.focus_entered.connect(func(): arrow.modulate.a = 1.0)
 	button.focus_exited.connect(func(): arrow.modulate.a = 0.0)
+
+func _apply_color() -> void:
+	arrow.add_theme_color_override("font_color", color)
 
 func set_focused() -> void:
 	button.grab_focus()
@@ -57,3 +75,6 @@ func _find_parent_menu() -> UiMenu:
 	
 func hide_components() -> void:
 	%Components.visible = false
+	
+func set_disabled(value: bool) -> void:
+	button.disabled = value  # greyed out via the theme, can't be pressed	

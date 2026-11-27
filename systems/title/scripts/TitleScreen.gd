@@ -20,7 +20,7 @@ func _on_confirmed(factory_name: String) -> void:
 	GameData.factory = Factory.new()
 	GameData.factory.factory_name = factory_name
 	GameData.factory.factory_stats = FactoryStats.initialize_stats(10, 10, 10)
-	GameData.factory.factory_model = FactoryStats.EStats.Labor
+	GameData.factory.factory_model = FactoryStatsData.Type.LABOR
 	
 	# Set Visible
 	factory_dialog.visible = false

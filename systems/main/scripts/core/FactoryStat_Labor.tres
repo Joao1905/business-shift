@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FactoryStatsData" format=3 uid="uid://3xr10txs0a2k"]
+
+[ext_resource type="Script" uid="uid://bhrd6bshm60yq" path="res://systems/main/scripts/core/FactoryStatsData.gd" id="1_43n0m"]
+
+[resource]
+script = ExtResource("1_43n0m")
+label = "Labor"
+color = Color(0.8901961, 0.09019608, 0.19607843, 1)
+metadata/_custom_type_script = "uid://bhrd6bshm60yq"

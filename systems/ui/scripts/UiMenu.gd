@@ -5,6 +5,9 @@ func _ready() -> void:
 	visibility_changed.connect(_on_visibility_changed)
 
 func _on_visibility_changed() -> void:
+	reset()
+
+func reset() -> void:
 	# (Initialize) Hide everything, recursively
 	for node in find_children("*", "BaseUiMenu", true, false):
 		node.visible = false
